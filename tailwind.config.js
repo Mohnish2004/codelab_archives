@@ -23,23 +23,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
-        'tienne': ['Tienne', ...fontFamily.serif],
-        'space-mono': ['Space Mono', ...fontFamily.mono],
       },
       colors: {
-        'warm-bg': '#FAF9F5',
-        primary: {
-          50: '#FAF6F3',
-          100: '#F0EAE4',
-          200: '#E2D5CA',
-          300: '#D3BFB0',
-          400: '#C4A995',
-          500: '#B5937B',
-          600: '#A67B5F',
-          700: '#8B6550',
-          800: '#704F40',
-          900: '#553B30',
-        },
+        primary: colors.pink,
         gray: colors.gray,
       },
       zIndex: {
