@@ -7,7 +7,7 @@ import SearchButton from './SearchButton'
 
 const Header = () => {
   let headerClass =
-    'flex items-center w-full bg-warm-bg dark:bg-gray-950 justify-between py-6 px-4 font-serif'
+    'flex items-center w-full bg-warm-bg/30 dark:bg-gray-950/30 backdrop-blur-xl border-b border-gray-200/20 dark:border-gray-800/20 justify-between py-6 px-4 font-serif'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
