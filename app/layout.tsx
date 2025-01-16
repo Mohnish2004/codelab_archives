@@ -40,14 +40,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
-    url: './',
+    url: siteMetadata.siteUrl,
     siteName: siteMetadata.title,
-    images: [siteMetadata.socialBanner],
+    images: [
+      {
+        url: `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`,
+        width: 1200,
+        height: 630,
+        alt: siteMetadata.title,
+      }
+    ],
     locale: 'en_US',
     type: 'website',
   },
   alternates: {
-    canonical: './',
+    canonical: siteMetadata.siteUrl,
     types: {
       'application/rss+xml': `${siteMetadata.siteUrl}/feed.xml`,
     },
@@ -66,7 +73,14 @@ export const metadata: Metadata = {
   twitter: {
     title: siteMetadata.title,
     card: 'summary_large_image',
-    images: [siteMetadata.socialBanner],
+    images: [
+      {
+        url: `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`,
+        width: 1200,
+        height: 630,
+        alt: siteMetadata.title,
+      }
+    ],
   },
 }
 

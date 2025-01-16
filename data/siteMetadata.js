@@ -8,7 +8,7 @@ const siteMetadata = {
   siteUrl: 'https://codelabarchive.vercel.app',
   siteRepo: 'https://github.com/mohnish-7/codelab-archives',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
-  socialBanner: 'https://i.ibb.co/Pr0hQpM/Image0003.png',
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/social-banner.png`,
   email: 'codelabdavis@gmail.com',
   github: 'https://github.com/CodeLabDavis',
   x: 'https://twitter.com/CodelabDavis',
