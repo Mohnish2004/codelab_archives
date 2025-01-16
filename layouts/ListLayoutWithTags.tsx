@@ -9,6 +9,7 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
+import Image from 'next/image'
 
 interface PaginationProps {
   totalPages: number
@@ -106,7 +107,7 @@ export default function ListLayoutWithTags({
         </div>
         <div className="grid gap-6">
           {displayPosts.map((post) => {
-            const { path, date, title, summary, tags } = post
+            const { path, date, title, summary, tags, images } = post
             return (
               <div
                 key={path}
@@ -116,7 +117,7 @@ export default function ListLayoutWithTags({
                   <div className="space-y-3">
                     <div className="font-mono text-base text-[#6B6B6B]">
                       <time dateTime={date} suppressHydrationWarning>
-                        2/12/25
+                        {formatDate(date)}
                       </time>
                     </div>
 
@@ -140,7 +141,16 @@ export default function ListLayoutWithTags({
                     </div>
                   </div>
 
-                  <div className="rounded-2xl bg-[#D9D9D9]"></div>
+                  {images?.[0] && (
+                    <div className="relative h-full w-full rounded-2xl overflow-hidden">
+                      <Image
+                        src={images[0]}
+                        alt={`Featured image for ${title}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             )
