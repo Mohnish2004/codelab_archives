@@ -84,7 +84,20 @@ module.exports = () => {
       return [
         {
           source: '/:path*',
-          headers: securityHeaders,
+          headers: [
+            {
+              key: 'Content-Security-Policy',
+              value: [
+                "default-src 'self'",
+                "script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app",
+                "style-src 'self' 'unsafe-inline'",
+                "img-src * blob: data:",
+                "media-src 'none'",
+                "connect-src *",
+                "frame-src giscus.app www.figma.com",
+              ].join('; '),
+            },
+          ],
         },
       ]
     },
