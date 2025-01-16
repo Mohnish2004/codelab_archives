@@ -31,6 +31,7 @@
     "postcss": "^8.4.24",
     "react": "rc",
     "react-dom": "rc",
+    "react-icons": "^5.4.0",
     "react-responsive-carousel": "^3.2.23",
     "reading-time": "1.5.0",
     "rehype-autolink-headings": "^7.1.0",

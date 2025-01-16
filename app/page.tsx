@@ -5,11 +5,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 export default function Page() {
   const images = [
-    '/static/images/carousel/1.jpg',
-    '/static/images/carousel/2.jpg',
-    '/static/images/carousel/3.jpg',
-    '/static/images/carousel/4.jpg',
-    '/static/images/carousel/5.jpg',
+
+    '/static/images/Pic14.png',
+    '/static/images/Pic15.png',
+    '/static/images/Pic18.png',
+    '/static/images/Pic20.png',
+    '/static/images/Pic25.png'
   ]
 
   return (
@@ -46,44 +47,44 @@ export default function Page() {
         <div>
           <div className="w-full">
             <div className="grid grid-cols-5 gap-3">
-              <div className="h-[280px] bg-gray-200">
+              <div className="h-[350px] bg-gray-200">
                 <img 
-                  src="/static/images/carousel/1.jpg"
+                  src="/static/images/Pic14.png"
                   alt="Codelab team 1"
                   className="object-cover h-full w-full"
                 />
               </div>
-              <div className="h-[280px] bg-gray-200">
+              <div className="h-[350px] bg-gray-200">
                 <img 
-                  src="/static/images/carousel/2.jpg"
+                  src="/static/images/Pic18.png"
                   alt="Codelab team 2"
                   className="object-cover h-full w-full"
                 />
               </div>
-              <div className="h-[280px] bg-gray-200">
+              <div className="h-[350px] bg-gray-200">
                 <img 
-                  src="/static/images/carousel/3.jpg"
+                  src="/static/images/Pic20.png"
                   alt="Codelab team 3"
                   className="object-cover h-full w-full"
                 />
               </div>
-              <div className="h-[280px] bg-gray-200">
+              <div className="h-[350px] bg-gray-200">
                 <img 
-                  src="/static/images/carousel/4.jpg"
+                  src="/static/images/Pic25.png"
                   alt="Codelab team 4"
                   className="object-cover h-full w-full"
                 />
               </div>
-              <div className="h-[280px] bg-gray-200">
+              <div className="h-[350px] bg-gray-200">
                 <img 
-                  src="/static/images/carousel/5.jpg"
+                  src="/static/images/Pic29.png"
                   alt="Codelab team 5"
                   className="object-cover h-full w-full"
                 />
               </div>
             </div>
           </div>
-          <p className="font-space-mono text-xs text-right mt-4 mb-32">
+          <p className="font-space-mono text-lg text-right mt-10 mb-32">
             A Student run organization
             <br />
             at university of california, davis

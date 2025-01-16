@@ -1,6 +1,6 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -28,16 +28,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex w-full lg:w-fit gap-4">
-          <a href={siteMetadata.facebook} className="w-8 h-8 border border-gray-500 rounded-full flex items-center justify-center">
-            <SocialIcon kind="facebook" href={siteMetadata.facebook} size={5} />
-          </a>
-          <a href={siteMetadata.twitter} className="w-8 h-8 border border-gray-500 rounded-full flex items-center justify-center">
-            <SocialIcon kind="twitter" href={siteMetadata.twitter} size={5} />
-          </a>
-          <a href={siteMetadata.instagram} className="w-8 h-8 border border-gray-500 rounded-full flex items-center justify-center">
-            <SocialIcon kind="instagram" href={siteMetadata.instagram} size={5} />
-          </a>
+        <div className="flex w-full lg:w-fit flex-col items-center gap-4">
+          <img src="/static/images/logo.svg" alt="Logo" className="h-8" />
+          <div className="flex">
+            <a className="social mr-2" href="https://www.facebook.com/CodeLabDavis" target="_blank">
+              <FaFacebook className="w-6 h-6" />
+            </a>
+            <a className="social mr-2" href="https://twitter.com/CodeLabDavis" target="_blank">
+              <FaTwitter className="w-6 h-6" />
+            </a>
+            <a className="social" href="https://www.instagram.com/codelabdavis" target="_blank">
+              <FaInstagram className="w-6 h-6" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
