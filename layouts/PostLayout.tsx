@@ -71,9 +71,9 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
           <div className="lg:col-span-4">
             <div className="rounded-xl border border-gray-200 bg-white p-6">
               <h2 className="mb-4 text-xl font-semibold">Workshop Resources</h2>
-              
+
               {/* Share Link Button */}
-              <ShareButton 
+              <ShareButton
                 className="mb-4 flex w-full items-center gap-2 rounded-lg bg-gray-100 px-4 py-3 text-gray-700 transition hover:bg-gray-200"
                 iconClassName="h-5 w-5"
                 text="Share Workshop"
@@ -93,7 +93,12 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     strokeWidth={2}
                     d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
                   />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
                 Watch on YouTube
               </a>
@@ -140,7 +145,6 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               ))}
 
               {/* Author section moved to sidebar */}
-
             </div>
           </div>
         </div>

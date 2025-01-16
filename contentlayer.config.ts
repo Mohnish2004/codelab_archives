@@ -1,4 +1,9 @@
-import { defineDocumentType, defineNestedType, ComputedFields, makeSource } from 'contentlayer2/source-files'
+import {
+  defineDocumentType,
+  defineNestedType,
+  ComputedFields,
+  makeSource,
+} from 'contentlayer2/source-files'
 import { writeFileSync } from 'fs'
 import readingTime from 'reading-time'
 import { slug } from 'github-slugger'
@@ -97,7 +102,7 @@ const WorkshopData = defineNestedType(() => ({
   name: 'WorkshopData',
   fields: {
     videoUrl: { type: 'string', required: true },
-    slidesUrl: { type: 'string', required: false }
+    slidesUrl: { type: 'string', required: false },
   },
 }))
 

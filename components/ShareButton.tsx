@@ -9,7 +9,11 @@ interface ShareButtonProps {
   text?: string
 }
 
-export default function ShareButton({ className, iconClassName = "h-4 w-4", text = "Share" }: ShareButtonProps) {
+export default function ShareButton({
+  className,
+  iconClassName = 'h-4 w-4',
+  text = 'Share',
+}: ShareButtonProps) {
   const [copied, setCopied] = useState(false)
 
   const handleShare = async () => {
@@ -24,7 +28,7 @@ export default function ShareButton({ className, iconClassName = "h-4 w-4", text
           color: '#fff',
         },
       })
-      
+
       // Reset the button after 2 seconds
       setTimeout(() => {
         setCopied(false)
@@ -38,35 +42,17 @@ export default function ShareButton({ className, iconClassName = "h-4 w-4", text
   }
 
   return (
-    <button
-      onClick={handleShare}
-      className={`${className} transition-all duration-200`}
-    >
+    <button onClick={handleShare} className={`${className} transition-all duration-200`}>
       {copied ? (
         <>
-          <svg 
-            className={iconClassName} 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M5 13l4 4L19 7"
-            />
+          <svg className={iconClassName} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
           <span>Copied!</span>
         </>
       ) : (
         <>
-          <svg 
-            className={iconClassName} 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
+          <svg className={iconClassName} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -79,4 +65,4 @@ export default function ShareButton({ className, iconClassName = "h-4 w-4", text
       )}
     </button>
   )
-} 
+}

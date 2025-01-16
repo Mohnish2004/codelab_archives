@@ -142,7 +142,7 @@ export default function ListLayoutWithTags({
                   </div>
 
                   {images?.[0] && (
-                    <div className="relative h-full w-full rounded-2xl overflow-hidden">
+                    <div className="relative h-full w-full overflow-hidden rounded-2xl">
                       <Image
                         src={images[0]}
                         alt={`Featured image for ${title}`}
