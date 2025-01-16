@@ -10,7 +10,6 @@ import type { AnchorHTMLAttributes } from 'react'
 export const components: MDXComponents = {
   Image,
   TOCInline,
-  // @ts-expect-error - types are not compatible with MDX 3
   a: CustomLink,
   pre: Pre,
   table: TableWrapper,
