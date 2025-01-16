@@ -1,13 +1,8 @@
 {
   "presentations": 1,
-  "workshop": 3,
+  "pm": 1,
   "design": 2,
-  "figma": 1,
-  "general-meeting": 1,
-  "slides": 1,
-  "social": 1,
-  "banquet": 1,
   "development": 1,
-  "react": 1,
-  "product-management": 1
+  "workshop": 1,
+  "general-meeting": 1
 }
