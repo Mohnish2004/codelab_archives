@@ -23,7 +23,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
-        'tienne': ['Tienne', ...fontFamily.serif],
+        tienne: ['Tienne', ...fontFamily.serif],
         'space-mono': ['Space Mono', ...fontFamily.mono],
       },
       colors: {

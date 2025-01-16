@@ -84,7 +84,7 @@ export default function ListLayoutWithTags({
     <>
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <div className="pb-12 pt-16">
-          <h1 className="text-[72px] font-serif leading-tight tracking-normal text-[#2D2D2D]">
+          <h1 className="font-serif text-[72px] leading-tight tracking-normal text-[#2D2D2D]">
             {title}
           </h1>
         </div>
@@ -94,10 +94,11 @@ export default function ListLayoutWithTags({
               key={t}
               href={`/tags/${slug(t)}`}
               className={`rounded-full px-4 py-1.5 text-sm font-medium 
-                ${decodeURI(pathname.split('/tags/')[1]) === slug(t)
-                  ? 'bg-[#7B6E63] text-white'
-                  : 'border border-[#7B6E63] text-[#7B6E63] hover:bg-[#7B6E63] hover:text-white'
-              }`}
+                ${
+                  decodeURI(pathname.split('/tags/')[1]) === slug(t)
+                    ? 'bg-[#7B6E63] text-white'
+                    : 'border border-[#7B6E63] text-[#7B6E63] hover:bg-[#7B6E63] hover:text-white'
+                }`}
             >
               {t}
             </Link>
@@ -107,7 +108,10 @@ export default function ListLayoutWithTags({
           {displayPosts.map((post) => {
             const { path, date, title, summary, tags } = post
             return (
-              <div key={path} className="rounded-[24px] bg-white p-8 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+              <div
+                key={path}
+                className="rounded-[24px] bg-white p-8 shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
+              >
                 <div className="grid grid-cols-[1fr,400px] gap-8">
                   <div className="space-y-3">
                     <div className="font-mono text-base text-[#6B6B6B]">
@@ -115,17 +119,15 @@ export default function ListLayoutWithTags({
                         2/12/25
                       </time>
                     </div>
-                    
+
                     <h2 className="font-mono text-[28px] font-bold leading-tight">
                       <Link href={`/${path}`} className="text-[#2D2D2D]">
                         {title}
                       </Link>
                     </h2>
-                    
-                    <p className="font-mono text-base text-[#6B6B6B] leading-relaxed">
-                      {summary}
-                    </p>
-                    
+
+                    <p className="font-mono text-base leading-relaxed text-[#6B6B6B]">{summary}</p>
+
                     <div className="flex flex-wrap gap-2 pt-1">
                       {tags?.map((tag) => (
                         <span
@@ -137,7 +139,7 @@ export default function ListLayoutWithTags({
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className="rounded-2xl bg-[#D9D9D9]"></div>
                 </div>
               </div>

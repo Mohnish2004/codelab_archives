@@ -8,6 +8,7 @@ import { genPageMetadata } from 'app/seo'
 import { Metadata } from 'next'
 
 const POSTS_PER_PAGE = 5
+const ALLOWED_TAGS = ['design', 'dev', 'general', 'pm']
 
 export async function generateMetadata(props: {
   params: Promise<{ tag: string }>
@@ -27,9 +28,7 @@ export async function generateMetadata(props: {
 }
 
 export const generateStaticParams = async () => {
-  const tagCounts = tagData as Record<string, number>
-  const tagKeys = Object.keys(tagCounts)
-  return tagKeys.map((tag) => ({
+  return ALLOWED_TAGS.map((tag) => ({
     tag: encodeURI(tag),
   }))
 }
@@ -37,6 +36,18 @@ export const generateStaticParams = async () => {
 export default async function TagPage(props: { params: Promise<{ tag: string }> }) {
   const params = await props.params
   const tag = decodeURI(params.tag)
+
+  if (!ALLOWED_TAGS.includes(tag)) {
+    return (
+      <ListLayout
+        posts={[]}
+        initialDisplayPosts={[]}
+        pagination={{ currentPage: 1, totalPages: 0 }}
+        title="Tag Not Found"
+      />
+    )
+  }
+
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   const filteredPosts = allCoreContent(
     sortPosts(allBlogs.filter((post) => post.tags && post.tags.map((t) => slug(t)).includes(tag)))

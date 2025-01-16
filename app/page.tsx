@@ -1,34 +1,30 @@
 'use client'
 import Link from 'next/link'
 import { Carousel } from 'react-responsive-carousel'
-import "react-responsive-carousel/lib/styles/carousel.min.css"
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import Image from 'next/image'
 
 export default function Page() {
   const images = [
-
     '/static/images/Pic14.png',
     '/static/images/Pic15.png',
     '/static/images/Pic18.png',
     '/static/images/Pic20.png',
-    '/static/images/Pic25.png'
+    '/static/images/Pic25.png',
   ]
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-start pt-20 bg-warm-bg text-[#2F261E]">
-      <div className="text-center w-full px-8">
-
-
-        <div className="flex items-center justify-center gap-4 mb-4">
+    <main className="flex min-h-screen flex-col items-center justify-start bg-warm-bg pt-20 text-[#2F261E]">
+      <div className="w-full px-8 text-center">
+        <div className="mb-4 flex items-center justify-center gap-4">
           <img src="/static/images/logo.svg" alt="Logo" className="h-12" />
-          <h1 className="text-5xl font-tienne"></h1>
         </div>
-      
-        <p className="font-space-mono text-sm max-w-md mx-auto mb-12">
-          Get access to custom curated workshops, files, slides,
-          video's and more
+
+        <p className="mx-auto mb-12 max-w-md font-space-mono text-sm">
+          Get access to custom curated workshops, files, slides, video's and more
         </p>
-        <div className="flex gap-6 items-center justify-center mb-32"></div>
-        
+        <div className="mb-32 flex items-center justify-center gap-6"></div>
+
         {/* <div className="flex gap-6 items-center justify-center mb-32">
           <Link 
             href="/explore" 
@@ -48,55 +44,55 @@ export default function Page() {
           <div className="w-full">
             <div className="grid grid-cols-5 gap-3">
               <div className="h-[350px] bg-gray-200">
-                <img 
+                <img
                   src="/static/images/Pic14.png"
                   alt="Codelab team 1"
-                  className="object-cover h-full w-full"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div className="h-[350px] bg-gray-200">
-                <img 
+                <img
                   src="/static/images/Pic18.png"
                   alt="Codelab team 2"
-                  className="object-cover h-full w-full"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div className="h-[350px] bg-gray-200">
-                <img 
+                <img
                   src="/static/images/Pic20.png"
                   alt="Codelab team 3"
-                  className="object-cover h-full w-full"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div className="h-[350px] bg-gray-200">
-                <img 
+                <img
                   src="/static/images/Pic25.png"
                   alt="Codelab team 4"
-                  className="object-cover h-full w-full"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div className="h-[350px] bg-gray-200">
-                <img 
+                <img
                   src="/static/images/Pic29.png"
                   alt="Codelab team 5"
-                  className="object-cover h-full w-full"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>
           </div>
-          <p className="font-space-mono text-lg text-right mt-10 mb-32">
+          <p className="mb-32 mt-10 text-right font-space-mono text-lg">
             A Student run organization
             <br />
             at university of california, davis
           </p>
 
-          <div className="text-center mb-32">
-          <div className="flex justify-center mb-6">
-          <img src="/static/images/bookicon.png" alt="Book Icon" className="w-20 h-20" />
-        </div>
-            <h2 className="text-4xl font-tienne mb-20">Unlock. Learn. Create.</h2>
-            
-            <div className="grid grid-cols-2 gap-20 max-w-4xl mx-auto px-4">
+          <div className="mb-32 text-center">
+            <div className="mb-6 flex justify-center">
+              <img src="/static/images/bookicon.png" alt="Book Icon" className="h-20 w-20" />
+            </div>
+            <h2 className="mb-20 font-tienne text-4xl">Unlock. Learn. Create.</h2>
+
+            <div className="mx-auto grid max-w-4xl grid-cols-2 gap-20 px-4">
               <div className="text-center">
                 <p className="font-space-mono text-sm leading-relaxed">
                   Access step-by-step guides
@@ -108,7 +104,7 @@ export default function Page() {
                   learn at your own pace.
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <p className="font-space-mono text-sm leading-relaxed">
                   Revisit impactful
