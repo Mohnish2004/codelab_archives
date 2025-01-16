@@ -1,27 +1,69 @@
-interface Project {
+import { FaFilePdf, FaFileVideo, FaFileAlt, FaLink, FaImages, FaFileWord } from 'react-icons/fa'
+import { IconType } from 'react-icons'
+
+export type FileType = 'pdf' | 'slide' | 'video' | 'link' | 'album' | 'document'
+
+export interface ProjectFile {
   title: string
   description: string
-  href?: string
-  imgSrc?: string
+  type: FileType
+  tags?: string[]
+  url?: string
 }
 
-const projectsData: Project[] = [
+// Map file types to icons
+export const fileTypeIcons: Record<FileType, IconType> = {
+  pdf: FaFilePdf,
+  slide: FaFileAlt,
+  video: FaFileVideo,
+  link: FaLink,
+  album: FaImages,
+  document: FaFileWord,
+}
+
+export const sampleFiles: ProjectFile[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'GM Workshop Slides Part 1',
+    description: 'Introduction to Game Maker Studio 2 - Basic Concepts',
+    type: 'slide',
+    tags: ['presentation', 'gamemaker'],
+    url: '/files/gm-slides-1.pdf',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'GM Workshop Slides Part 2',
+    description: 'Sprites, Objects, and Events in Game Maker Studio 2',
+    type: 'slide',
+    tags: ['presentation', 'gamemaker'],
+    url: '/files/gm-slides-2.pdf',
+  },
+  {
+    title: 'GM Workshop Slides Part 3',
+    description: 'Advanced Game Mechanics and Polish in Game Maker Studio 2',
+    type: 'slide',
+    tags: ['presentation', 'gamemaker'],
+    url: '/files/gm-slides-3.pdf',
+  },
+  {
+    title: 'Workshop Handout.pdf',
+    description: 'Step-by-step guide for creating your first game in GM Studio 2',
+    type: 'pdf',
+    tags: ['tutorial', 'gamemaker'],
+    url: '/files/workshop-handout.pdf',
+  },
+  {
+    title: 'Resource Pack',
+    description: 'Sprites, sounds, and assets for the workshop project',
+    type: 'album',
+    tags: ['resources', 'assets'],
+    url: '/files/resource-pack',
+  },
+  {
+    title: 'Additional Resources',
+    description: 'Useful links and documentation for Game Maker Studio 2',
+    type: 'link',
+    tags: ['resources', 'gamemaker'],
+    url: '/resources',
   },
 ]
 
-export default projectsData
+export default sampleFiles

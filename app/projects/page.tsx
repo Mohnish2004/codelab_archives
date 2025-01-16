@@ -1,20 +1,37 @@
-import projectsData from '@/data/projectsData'
-import Card from '@/components/Card'
+import projectsData, { FileType } from '@/data/projectsData'
 import { genPageMetadata } from 'app/seo'
+import ListLayoutWithFiles from '@/components/layouts/ListLayoutWithFiles'
+import { IconType } from 'react-icons'
+
+const FILES_PER_PAGE = 5
 
 export const metadata = genPageMetadata({ title: 'Projects' })
 
+interface ProjectFile {
+  icon: IconType
+  title: string
+  description: string
+  type: FileType
+  tags?: string[]
+  url?: string
+}
+
 export default function Projects() {
+  const files = projectsData
+  const pageNumber = 1
+  const totalPages = Math.ceil(files.length / FILES_PER_PAGE)
+  const initialDisplayFiles = files.slice(0, FILES_PER_PAGE * pageNumber)
+  const pagination = {
+    currentPage: pageNumber,
+    totalPages: totalPages,
+  }
+
   return (
-    <>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Projects
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">Coming soon...</p>
-        </div>
-      </div>
-    </>
+    <ListLayoutWithFiles
+      files={files}
+      initialDisplayFiles={initialDisplayFiles}
+      pagination={pagination}
+      title="Files"
+    />
   )
 }

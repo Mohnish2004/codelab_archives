@@ -85,7 +85,7 @@ export default function ListLayoutWithTags({
     <>
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <div className="pb-12 pt-16">
-          <h1 className="font-serif text-[72px] leading-tight tracking-normal text-[#2D2D2D]">
+          <h1 className="font-serif text-[42px] leading-tight tracking-normal text-[#2D2D2D] md:text-[56px] lg:text-[72px]">
             {title}
           </h1>
         </div>
@@ -111,9 +111,9 @@ export default function ListLayoutWithTags({
             return (
               <div
                 key={path}
-                className="rounded-[24px] bg-white p-8 shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
+                className="rounded-[24px] bg-white p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] sm:p-6 lg:p-8"
               >
-                <div className="grid grid-cols-[1fr,400px] gap-8">
+                <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr,400px] lg:gap-8">
                   <div className="space-y-3">
                     <div className="font-mono text-base text-[#6B6B6B]">
                       <time dateTime={date} suppressHydrationWarning>
@@ -142,7 +142,7 @@ export default function ListLayoutWithTags({
                   </div>
 
                   {images?.[0] && (
-                    <div className="relative h-full w-full overflow-hidden rounded-2xl">
+                    <div className="relative h-[240px] w-full overflow-hidden rounded-2xl lg:h-full">
                       <Image
                         src={images[0]}
                         alt={`Featured image for ${title}`}
