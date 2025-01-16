@@ -1,4 +1,4 @@
-const withContentlayer = require('next-contentlayer2').withContentlayer
+const { withContentlayer } = require('next-contentlayer2')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -61,7 +61,7 @@ const unoptimized = process.env.UNOPTIMIZED ? true : undefined
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  **/
-const nextConfig = () => {
+module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
     output,
@@ -98,5 +98,3 @@ const nextConfig = () => {
     },
   })
 }
-
-module.exports = withContentlayer(nextConfig)
