@@ -1,4 +1,5 @@
 import Link from './Link'
+import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 
@@ -29,7 +30,7 @@ export default function Footer() {
         </div>
 
         <div className="flex w-full flex-col items-center gap-4 lg:w-fit">
-          <img src="/static/images/logo.svg" alt="Logo" className="h-8" />
+          <Image src="/static/images/logo.svg" alt="Logo" width={32} height={32} className="h-8" />
           <div className="flex">
             <a className="social mr-2" href="https://www.facebook.com/CodeLabDavis" target="_blank">
               <FaFacebook className="h-6 w-6" />

@@ -31,32 +31,32 @@ const tienne = Tienne({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteMetadata.siteUrl),
+  metadataBase: new URL('https://codelabarchive.vercel.app'),
   title: {
-    default: siteMetadata.title,
-    template: `%s | ${siteMetadata.title}`,
+    default: 'Codelab Archives',
+    template: `%s | Codelab Archives`,
   },
-  description: siteMetadata.description,
+  description: 'Archive of Codelab Davis projects and resources',
   openGraph: {
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    url: siteMetadata.siteUrl,
-    siteName: siteMetadata.title,
+    title: 'Codelab Archives',
+    description: 'Archive of Codelab Davis projects and resources',
+    url: 'https://codelabarchive.vercel.app',
+    siteName: 'Codelab Archives',
     images: [
       {
-        url: `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`,
+        url: '/static/images/social-banner.png',
         width: 1200,
         height: 630,
-        alt: siteMetadata.title,
-      }
+        alt: 'Codelab Archives',
+      },
     ],
     locale: 'en_US',
     type: 'website',
   },
   alternates: {
-    canonical: siteMetadata.siteUrl,
+    canonical: 'https://codelabarchive.vercel.app',
     types: {
-      'application/rss+xml': `${siteMetadata.siteUrl}/feed.xml`,
+      'application/rss+xml': 'https://codelabarchive.vercel.app/feed.xml',
     },
   },
   robots: {
@@ -71,15 +71,15 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: siteMetadata.title,
+    title: 'Codelab Archives',
     card: 'summary_large_image',
     images: [
       {
-        url: `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`,
+        url: '/static/images/social-banner.png',
         width: 1200,
         height: 630,
-        alt: siteMetadata.title,
-      }
+        alt: 'Codelab Archives',
+      },
     ],
   },
 }
