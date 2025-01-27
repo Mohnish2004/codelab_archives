@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: 'Codelab Archives',
     images: [
       {
-        url: '/static/images/social-banner.png',
+        url: '/static/images/twitter-card.png',
         width: 1200,
         height: 630,
         alt: 'Codelab Archives',
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: [
       {
-        url: '/static/images/social-banner.png',
+        url: '/static/images/twitter-card.png',
         width: 1200,
         height: 630,
         alt: 'Codelab Archives',

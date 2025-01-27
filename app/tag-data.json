@@ -1,8 +1,8 @@
 {
+  "design": 5,
+  "workshop": 4,
+  "general-meeting": 4,
   "presentations": 1,
   "pm": 1,
-  "design": 2,
-  "development": 1,
-  "workshop": 1,
-  "general-meeting": 1
+  "development": 3
 }

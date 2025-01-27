@@ -8,7 +8,15 @@ import { genPageMetadata } from 'app/seo'
 import { Metadata } from 'next'
 
 const POSTS_PER_PAGE = 5
-const ALLOWED_TAGS = ['design', 'dev', 'general', 'pm']
+const ALLOWED_TAGS = [
+  'design',
+  'development',
+  'general',
+  'pm',
+  'workshop',
+  'general-meeting',
+  'presentations',
+]
 
 export async function generateMetadata(props: {
   params: Promise<{ tag: string }>
