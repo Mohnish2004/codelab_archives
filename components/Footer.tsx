@@ -13,24 +13,45 @@ export default function Footer() {
             <Link href="/" className="mb-2 block text-gray-500 hover:text-gray-700">
               {siteMetadata.title}
             </Link>
+            <Link
+              href="https://codelabdavis.com"
+              className="mb-2 block text-gray-500 hover:text-gray-700"
+              title="Main Website"
+            >
+              Main Website
+            </Link>
+            <Link
+              href="https://os.codelabdavis.com"
+              className="mb-2 block text-gray-500 hover:text-gray-700"
+              title="Open Source"
+            >
+              Open Source
+            </Link>
+            <Link
+              href="https://codelabdavis.com/toolkit"
+              className="mb-2 block text-gray-500 hover:text-gray-700"
+              title="Toolkit"
+            >
+              Toolkit
+            </Link>
           </div>
 
           <div>
             <h4 className="mb-4 font-bold text-black">Bootcamps</h4>
             <Link href="/blog" className="mb-2 block text-gray-500 hover:text-gray-700">
-              Designers
+              Workshops
             </Link>
-            <Link href="/tags" className="mb-2 block text-gray-500 hover:text-gray-700">
-              Developers
+            <Link href="/about" className="mb-2 block text-gray-500 hover:text-gray-700">
+              About us
             </Link>
             <Link href="/projects" className="mb-2 block text-gray-500 hover:text-gray-700">
-              Project Managers
+              Files
             </Link>
           </div>
         </div>
 
         <div className="flex w-full flex-col items-center gap-4 lg:w-fit">
-          <Image src="/static/images/logo.svg" alt="Logo" width={32} height={32} className="h-8" />
+          <Image src="/static/images/logo.svg" alt="Logo" width={60} height={60} />
           <div className="flex">
             <a className="social mr-2" href="https://www.facebook.com/CodeLabDavis" target="_blank">
               <FaFacebook className="h-6 w-6" />

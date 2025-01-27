@@ -1,8 +1,18 @@
 {
+  "all": 11,
   "design": 5,
-  "workshop": 4,
-  "general-meeting": 4,
+  "workshop": 10,
+  "general-meeting": 6,
   "presentations": 1,
   "pm": 1,
-  "development": 3
+  "development": 9,
+  "projects": 1,
+  "client-handoff": 1,
+  "documentation": 1,
+  "deployment": 1,
+  "hosting": 1,
+  "presentation": 1,
+  "public-speaking": 1,
+  "communication": 1,
+  "team-building": 1
 }
