@@ -11,11 +11,23 @@ const POSTS_PER_PAGE = 5
 const ALLOWED_TAGS = [
   'design',
   'development',
-  'general',
-  'pm',
-  'workshop',
   'general-meeting',
+  'pm',
   'presentations',
+  'workshop',
+  'all',
+  'projects',
+  'client-handoff',
+  'documentation',
+  'deployment',
+  'resources',
+  'hosting',
+  'public-speaking',
+  'communication',
+  'team-building',
+
+
+
 ]
 
 export async function generateMetadata(props: {
