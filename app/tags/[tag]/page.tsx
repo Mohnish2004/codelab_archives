@@ -25,9 +25,6 @@ const ALLOWED_TAGS = [
   'public-speaking',
   'communication',
   'team-building',
-
-
-
 ]
 
 export async function generateMetadata(props: {
