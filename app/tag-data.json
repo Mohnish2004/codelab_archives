@@ -1,19 +1,19 @@
 {
-  "all": 12,
+  "blog": 1,
+  "open-source": 1,
   "design": 7,
+  "development": 11,
+  "all": 12,
   "workshop": 11,
   "general-meeting": 6,
   "presentations": 2,
   "pm": 1,
-  "development": 11,
   "projects": 1,
   "client-handoff": 1,
   "documentation": 1,
   "deployment": 1,
   "hosting": 1,
   "public-speaking": 1,
-  "blog": 1,
-  "open-source": 1,
   "communication": 1,
   "team-building": 1
 }
