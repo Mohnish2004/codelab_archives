@@ -39,8 +39,8 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
               </div>
             </div>
           </header>
-          <div className="grid-rows-[auto_1fr] divide-y divide-slate-200 pb-8 dark:divide-slate-800 xl:divide-y-0">
-            <div className="divide-y divide-slate-200 dark:divide-slate-800 xl:col-span-3 xl:row-span-2 xl:pb-0">
+          <div className="grid-rows-[auto_1fr] divide-y divide-slate-200 pb-8 xl:divide-y-0 dark:divide-slate-800">
+            <div className="divide-y divide-slate-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-slate-800">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
             </div>
             {siteMetadata.comments && (

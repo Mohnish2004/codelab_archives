@@ -102,7 +102,7 @@ export default function ResourcesSidebar({ workshop, content }: ResourcesSidebar
           href={workshop.imagesUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full mt-4 items-center gap-2 rounded-lg bg-gray-100 px-4 py-3 text-gray-700 transition hover:bg-gray-200"
+          className="mt-4 flex w-full items-center gap-2 rounded-lg bg-gray-100 px-4 py-3 text-gray-700 transition hover:bg-gray-200"
         >
           <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
