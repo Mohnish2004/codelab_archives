@@ -103,6 +103,7 @@ const WorkshopData = defineNestedType(() => ({
   fields: {
     videoUrl: { type: 'string', required: true },
     slidesUrl: { type: 'string', required: false },
+    imagesUrl: { type: 'string', required: false },
   },
 }))
 

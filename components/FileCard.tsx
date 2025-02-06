@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function FileCard({ title, type, description, url, tags }: ProjectFile) {
   return (
-    <div className="flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800">
+    <div className="flex flex-col overflow-hidden rounded-lg border border-gray-200">
       <div className="p-4">
         <div className="text-sm font-medium uppercase text-primary-500">{type}</div>
         <a href={url} className="text-lg font-semibold hover:text-primary-600">

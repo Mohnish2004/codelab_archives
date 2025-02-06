@@ -4,6 +4,7 @@ interface ResourcesSidebarProps {
   workshop?: {
     videoUrl: string
     slidesUrl?: string
+    imagesUrl?: string
   }
   content: {
     resources?: Array<{
@@ -93,6 +94,52 @@ export default function ResourcesSidebar({ workshop, content }: ResourcesSidebar
           </svg>
           View Slides
         </a>
+      )}
+
+      {/* Images Gallery Link */}
+      {workshop?.imagesUrl && (
+        <a
+          href={workshop.imagesUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex w-full mt-4 items-center gap-2 rounded-lg bg-gray-100 px-4 py-3 text-gray-700 transition hover:bg-gray-200"
+        >
+          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
+          </svg>
+          View Photo Gallery
+        </a>
+      )}
+
+      {/* Additional Resources */}
+      {content.resources && content.resources.length > 0 && (
+        <div className="">
+          <h3 className="mb-2 font-medium">Additional Resources</h3>
+          {content.resources.map((resource, index) => (
+            <a
+              key={index}
+              href={resource.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-2 flex w-full items-center gap-2 rounded-lg bg-gray-100 px-4 py-3 text-gray-700 transition hover:bg-gray-200"
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+              {resource.title}
+            </a>
+          ))}
+        </div>
       )}
     </>
   )
