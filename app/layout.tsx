@@ -3,13 +3,14 @@ import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
 import { Space_Grotesk, Space_Mono, Tienne } from 'next/font/google'
-import { Analytics, AnalyticsConfig } from 'pliny/analytics'
+import { AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { Metadata } from 'next'
+import { Analytics } from "@vercel/analytics/react"
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -120,7 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       <body className="bg-warm-bg pl-[calc(100vw-100%)] text-black antialiased">
-        <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
+      <Analytics />
         <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
           <Header />
           <main className="mb-auto w-full">{children}</main>
