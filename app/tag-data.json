@@ -1,7 +1,7 @@
 {
   "all": 11,
   "design": 6,
-  "workshop": 11,
+  "workshop": 10,
   "general-meeting": 6,
   "presentations": 2,
   "pm": 1,
@@ -12,7 +12,8 @@
   "deployment": 1,
   "hosting": 1,
   "public-speaking": 1,
-  "ui-components": 1,
+  "blog": 1,
+  "open-source": 1,
   "communication": 1,
   "team-building": 1
 }
